@@ -1,0 +1,100 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY & CONTAINER */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef4f8;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #1a73e8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.nav-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s;
+}
+.nav-links a:hover {
+  color: #cbe1f9;
+}
+
+/* SECTION CARDS */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.card h1 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+.card h2 {
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+.card p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.card ul {
+  list-style: disc inside;
+  text-align: left;
+  padding-left: 0;
+}
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* IMAGE SECTION */
+.image-section img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+#bt {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+#bt:hover {
+  background-color: #155ab6;
+}
+
+

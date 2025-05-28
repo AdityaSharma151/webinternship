@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>About Me</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="https://aeon.co/essays/how-to-live-a-good-life" target="_blank">Aeon</a></li>
+          <li><a href="https://www.nytimes.com/section/technology" target="_blank">NYT Tech</a></li>
+          <li><a href="https://www.bbc.com/news/science_and_environment" target="_blank">BBC Sci</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- About Me -->
+    <section class="card">
+      <h1>About Me</h1>
+      <p>Hello! My name is Aditya. I'm passionate about learning and exploring new things. Welcome to my personal webpage!</p>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="card">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Reading books</li>
+        <li>Playing football</li>
+        <li>Coding and building websites</li>
+        <li>Listening to music</li>
+        <li>Photography</li>
+      </ul>
+    </section>
+
+    <section class="card image-section">
+      <h2>My Favorite Picture</h2>
+      <img src="./cover.jpg" alt="My hobby image" />
+      <button id="bt">Click me</button>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("bt").addEventListener("click", () => {
+      alert("Hello! You clicked the button.");
+    });
+  </script>
+
+</body>
+</html>
