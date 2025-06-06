@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Todo Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <h1>My Website</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <main class="grid-layout">
+      <!-- Contact Form -->
+      <section class="form-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <p id="formMsg"></p>
+      </section>
+
+        <!-- Todo List -->
+         
+      <section class="todo-section">
+        <h2>Todo List</h2>
+        <form id="todoForm">
+          <input type="text" id="todoInput" placeholder="Enter a task" required />
+          <button type="submit">Add Task</button>
+        </form>
+        <ul id="todoList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
