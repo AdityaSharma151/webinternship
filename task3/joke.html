@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Quiz & Joke App</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌟 Interactive Web App</h1>
+      <p class="subtitle">Responsive Layout | Fun Quiz | Live Jokes</p>
+    </header>
+
+    <main>
+      <!-- Quiz Section -->
+      <section class="card" id="quiz-container">
+        <h2>🧠 Quick Quiz</h2>
+        <p id="question" class="question"></p>
+        <ul id="options" class="options"></ul>
+        <button onclick="nextQuestion()" id="nextBtn">Next Question</button>
+      </section>
+
+      <!-- Joke Section -->
+      <section class="card">
+        <h2>😂 Joke of the Moment</h2>
+        <p id="joke">Loading...</p>
+        <button onclick="getJoke()">Get Another Joke</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with ❤️ using HTML, CSS, and JS</p>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
