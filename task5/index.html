@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Store - Premium Football Jerseys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="#" class="nav-logo" onclick="showHome()">⚽ Jersey Store</a>
+                <div class="nav-links">
+                    <a href="#" onclick="showShop()" class="nav-link">Shop</a>
+                    <a href="#" onclick="showTeams()" class="nav-link">Teams</a>
+                    <a href="#" onclick="showLeagues()" class="nav-link">Leagues</a>
+                    <a href="#" onclick="showSale()" class="nav-link sale-link">Sale</a>
+                </div>
+                <a href="#" id="cartLink" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Premium Football
+                            <span class="hero-accent">Jerseys</span>
+                        </h1>
+                        <p class="hero-description">
+                            Discover authentic jerseys from the world's greatest football clubs. 
+                            Official merchandise with premium quality and fast shipping.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="showShop()">Shop Now</button>
+                            <button class="btn btn-outline" onclick="showLeagues()">View Collections</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Jerseys -->
+            <section class="featured-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Featured Jerseys</h2>
+                        <p>The most popular jerseys from top clubs</p>
+                    </div>
+                    <div class="jerseys-grid" id="featuredJerseys">
+                        <!-- Featured jerseys will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Football Clubs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Customer Support</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Free</div>
+                            <div class="stat-label">Worldwide Shipping</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Shop Page -->
+        <div id="shopPage" class="page">
+            <div class="container page-container">
+                <div class="page-header">
+                    <h1>Football Jerseys</h1>
+                    <p>Discover our complete collection of authentic football jerseys</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="filter-label">
+                        <i class="fas fa-filter"></i>
+                        <span>Filters:</span>
+                    </div>
+                    <select id="leagueFilter" class="filter-select">
+                        <option value="all">All Leagues</option>
+                        <option value="Premier League">Premier League</option>
+                        <option value="La Liga">La Liga</option>
+                        <option value="Bundesliga">Bundesliga</option>
+                        <option value="Ligue 1">Ligue 1</option>
+                    </select>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+
+                <!-- Results count -->
+                <div class="results-count">
+                    <p id="resultsText">Showing jerseys</p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="jerseys-grid" id="shopJerseys">
+                    <!-- Shop jerseys will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Teams Page -->
+        <div id="teamsPage" class="page">
+            <div class="container page-container">
+                <div class="page-header">
+                    <h1>Football Teams</h1>
+                    <p>Browse jerseys by your favorite teams</p>
+                </div>
+                <div class="teams-grid" id="teamsGrid">
+                    <!-- Teams will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Leagues Page -->
+        <div id="leaguesPage" class="page">
+            <div class="container page-container">
+                <div class="page-header">
+                    <h1>Football Leagues</h1>
+                    <p>Discover jerseys from the world's most prestigious football leagues</p>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="leagueSearch" placeholder="Search leagues...">
+                    </div>
+                    <select id="continentFilter" class="filter-select">
+                        <option value="all">All Continents</option>
+                        <option value="Europe">Europe</option>
+                        <option value="North America">North America</option>
+                    </select>
+                    <button class="btn btn-outline" onclick="clearLeagueFilters()">Clear Filters</button>
+                </div>
+
+                <div class="leagues-grid" id="leaguesGrid">
+                    <!-- Leagues will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Page -->
+        <div id="productPage" class="page">
+            <div class="container page-container">
+                <div class="breadcrumb">
+                    <a href="#" onclick="showHome()">Home</a>
+                    <span>/</span>
+                    <a href="#" onclick="showShop()">Shop</a>
+                    <span>/</span>
+                    <span id="productBreadcrumb">Product</span>
+                </div>
+
+                <div class="product-detail" id="productDetail">
+                    <!-- Product details will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cartPage" class="page">
+            <div class="container page-container">
+                <div class="page-header">
+                    <h1>Shopping Cart</h1>
+                </div>
+                <div id="cartContent">
+                    <!-- Cart content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚽ Jersey Store</h3>
+                    <p>Your premier destination for authentic football jerseys from clubs around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="showShop()">Shop All</a></li>
+                        <li><a href="#" onclick="showTeams()">Teams</a></li>
+                        <li><a href="#" onclick="showLeagues()">Leagues</a></li>
+                        <li><a href="#" onclick="showSale()">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>Email: info@jerseystore.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Follow us on social media</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jersey Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Size Selection -->
+    <div id="sizeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSizeModal()">&times;</span>
+            <h3>Select Size</h3>
+            <div id="sizeOptions" class="size-options">
+                <!-- Size options will be populated by JavaScript -->
+            </div>
+            <button class="btn btn-primary" onclick="addToCartWithSize()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

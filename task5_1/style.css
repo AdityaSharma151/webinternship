@@ -1,0 +1,260 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Fonts */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #4f46e5;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Blog Form */
+#blog-form-section {
+  background: #fff;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+#blog-form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+}
+
+#blog-form input,
+#blog-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+#blog-form input:focus,
+#blog-form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Submit Button */
+#blog-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#blog-form button:hover {
+  background-color: #3730a3;
+}
+
+/* Blog Grid Container */
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Blog Card */
+.blog-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #4f46e5;
+}
+
+.blog-body {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Pagination Controls */
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0 2rem;
+}
+
+#pagination-controls button {
+  padding: 0.6rem 1.2rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#pagination-controls button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+#pagination-controls span {
+  font-weight: 500;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  #blog-form-section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .blog-title {
+    font-size: 1.1rem;
+  }
+
+  .blog-body {
+    font-size: 0.95rem;
+  }
+
+  #pagination-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* === Theme Toggle Button === */
+#theme-toggle {
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #4f46e5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: #eee;
+}
+
+/* === DARK MODE === */
+body.dark {
+  background-color: #18181b;
+  color: #e5e7eb;
+}
+
+body.dark header {
+  background-color: #27272a;
+  color: #f9fafb;
+}
+
+body.dark #blog-form-section,
+body.dark .blog-card {
+  background-color: #27272a;
+  color: #e5e7eb;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #1f1f23;
+  border: 1px solid #444;
+  color: #f3f4f6;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #aaa;
+}
+
+body.dark #blog-form button,
+body.dark #pagination-controls button {
+  background-color: #6366f1;
+}
+
+body.dark #pagination-controls button:disabled {
+  background-color: #52525b;
+}
+
+body.dark #theme-toggle {
+  background-color: #4f46e5;
+  color: white;
+}
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-actions button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
